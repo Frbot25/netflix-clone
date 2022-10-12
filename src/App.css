@@ -1,12 +1,40 @@
 .App {
-  text-align: center;
-}
 
+}
+body {
+  background-color: #141414;
+  color: #fff;
+  font-family: "Netflix Sans,Helvetica Neue,Helvetica,Arial,sans-serif";
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+.list {
+  position: relative;
+}
+.item {
+  position: absolute;
+  top: 0;
+}
+.image--container {
+  display: flex;
+  width: 100wv;
+  position: relative;
+  top: -20px;
 
+}
+.image--container img{
+  background-size: cover;
+  width: 100%;
+  z-index: -1;
+  position:inherit;
+  top: 0;
+}
+.scrolled {
+  background-color: #141414;
+  opacity: 0;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

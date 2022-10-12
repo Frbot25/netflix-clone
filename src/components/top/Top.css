@@ -1,0 +1,14 @@
+.top h2{
+    text-align: start;
+    position: relative;
+    left: 100px;
+    top: -100px;
+    font-size: 30px;
+}
+.top h3{
+    font-size: 300px;
+    margin: 0;
+    position: relative;
+    top: -150px;
+    color: #000;
+}
