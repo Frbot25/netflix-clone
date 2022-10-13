@@ -1,0 +1,41 @@
+.footer {
+    color: rgb(107, 105, 105);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+
+}
+.infos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.infos-content {
+    padding: 3px;
+    margin: 3px;
+}
+.service {
+    width: 50%;
+    text-align: start;
+    margin-bottom: 150px;
+    padding: 10px;
+}
+.service a{
+     height: 30px;
+    border: 1px solid #f1f1f1;
+    padding: 10px;
+    margin-bottom: 50px;
+    color: rgb(107, 105, 105);
+}
+.service a:hover{
+     color: #f1f1f1;
+}
+@media only screen and (max-width: 760px) {
+
+
+  }

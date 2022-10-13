@@ -31,7 +31,7 @@ const Header = () => {
                 <li><NavLink to='/'>Accueil</NavLink></li>
                 <li><NavLink to='#'>Série</NavLink></li>
                 <li><NavLink to='#'>Films</NavLink></li>
-                <li><NavLink to='#'>Nouveautés les plus regardées</NavLink></li>
+                <li><NavLink to='#'>Nouveautés</NavLink></li>
                 
             </ul>
             </div>
@@ -39,9 +39,9 @@ const Header = () => {
             <ul className='navbar--right'>
                 <input className='search--input hidden' type="text" placeholder='Titres, personnes, genres' />
                 <li><BiSearchAlt2 className='search' style={{fontSize: "30px", fontWeight: "bold", cursor: "pointer"}} onClick={handleClic}/></li>
-                <li><NavLink to='#'>Direct</NavLink></li>
-                <li><NavLink to='#'>Jeunesse</NavLink></li>
-                <li><NavLink to='#'><BsBellFill style={{color: "#f1f1f1"}}/></NavLink></li>
+                <li className='link--right'><NavLink to='#'>Direct</NavLink></li>
+                <li className='link--right'><NavLink to='#'>Jeunesse</NavLink></li>
+                <li><NavLink to='#'><BsBellFill style={{color: "#f1f1f1"}} className='arrow1'/></NavLink></li>
                 <li><img id='test' src={Profile} alt="profil" /><MdOutlineArrowDropDown className='arrow' style={{color: "#f1f1f1"}}/></li>
                 <div className='handleClicMenu hidden'>
                     <ul>

@@ -40,6 +40,31 @@ export default {
                 title: "action",
                 item: await fetchMovies(`discover/movie?api_key=${API_KEY}&with_genres=28`),
             },
+            {
+                slug: "Documentary",
+                title: "Documentaire",
+                item: await fetchMovies(`discover/movie?api_key=${API_KEY}&with_genres=99`),
+            },
+            {
+                slug: "Horror",
+                title: "Horreur",
+                item: await fetchMovies(`discover/movie?api_key=${API_KEY}&with_genres=27`),
+            },
+            {
+                slug: "Science Fiction",
+                title: "Science Fiction",
+                item: await fetchMovies(`discover/movie?api_key=${API_KEY}&with_genres=878`),
+            },
+            {
+                slug: "Romance",
+                title: "Romance",
+                item: await fetchMovies(`discover/movie?api_key=${API_KEY}&with_genres=10749`),
+            },
+            {
+                slug: "Family",
+                title: "Family",
+                item: await fetchMovies(`discover/movie?api_key=${API_KEY}&with_genres=10751`),
+            },
             
         ]
     },

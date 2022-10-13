@@ -3,10 +3,8 @@ import './App.css';
 import MovieSection from './components/MovieSection';
 import FetchApiMovie from './FetchApiMovie';
 import Header from './components/Header';
-import film from './assets/1352387_backdrop_scale_1280xauto.jpg'
-import Banner from './components/banner/Banner';
-import Top from './components/top/Top';
 import FeaturedMovie from './components/FeaturedMovie';
+import Footer from './components/Footer';
 
 function App() {
   
@@ -38,15 +36,13 @@ function App() {
     
        //console.log(chooseRandomMovie)
       let chosen = await  originals[0].item.results[chooseRandomMovie];
-      console.log(chosen);
+      //console.log(chosen);
       let chosenInfo = await FetchApiMovie.getOneMovie(chosen.id, "movie");
       setFeatureData(chosenInfo)
-
+  
     }
     loadMoviies();
   }, []);
-
-
   return (
     <div className="App">
       <Header />
@@ -56,8 +52,6 @@ function App() {
         featureData && <FeaturedMovie film={featureData}/>
       }
       </>
-        {/* <Banner film={film}/> */}
-        <Top />
       <section className='list'>
         {
           moviesList.map((item, key) => (
@@ -66,7 +60,7 @@ function App() {
         }
       </section>
       </main>
-      
+      <Footer />
     </div>
   );
 }

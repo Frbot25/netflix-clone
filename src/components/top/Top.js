@@ -2,7 +2,8 @@ import './Top.css';
 import FetchApiMovie from '../../FetchApiMovie';
 import { useEffect, useState } from 'react';
 
-const Top = () => {
+const Top = ({title}) => {
+  console.log(title)
     const [moviesList, setMoviesList] = useState([]);
     useEffect(() => {
         const loadMoviies = async () => {
@@ -14,22 +15,29 @@ const Top = () => {
         loadMoviies();
       }, []);
       const result = () => {
+        console.log(moviesList)
         moviesList.map((item, key) => {
-         // return console.log(item.item.results)
+         return console.log(item.item.results)
         })
       }
       result()
     return (
         <div className='top'>
-            {
+          <h2>{title}</h2>
+            {/* {
                 moviesList.map((item, key) => (
                     <section key={key}>
-                    <h2>Top 10 des séries aujourd'hui: France</h2>
-                    <h3 className='top--one'>{item.item.id}</h3>
+                    
+                    <div  className="movieRow--item">
+                         <img  src={`https://image.tmdb.org/t/p/w200${item.item.poster_path}`} alt="poster" />
+                        
+                           
+                         
+                </div>
                     
                 </section>
                 ))
-            }
+            } */}
            
         </div>
     )

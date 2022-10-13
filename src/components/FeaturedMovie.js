@@ -1,5 +1,7 @@
 import React from 'react'
 import './FeaturedMovie.css'
+import { FaPlay } from 'react-icons/fa';
+import { RiInformationLine } from 'react-icons/ri';
 function FeaturedMovie({film}) {
   let genres = [];
   for (const genre of film.genres) {
@@ -20,8 +22,8 @@ function FeaturedMovie({film}) {
             </div>
             <div className='featured--description'>{film.overview}</div>
             <div className='featured--button'>
-              <a href="/" className='featured--playbutton'>Lecture</a>
-              <a href="/" className='featured--mylistbutton'>Ma liste</a>
+              <a href="/" className='featured--playbutton'><FaPlay /> Lecture</a>
+              <a href="/" className='featured--mylistbutton'><RiInformationLine /> Plus d'infos</a>
               </div>
               <div className='featured--genres'>
                  <strong> Genres : {genres.join(", ")}</strong>
