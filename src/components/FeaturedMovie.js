@@ -2,7 +2,7 @@ import React from 'react'
 import './FeaturedMovie.css'
 import { FaPlay } from 'react-icons/fa';
 import { RiInformationLine } from 'react-icons/ri';
-function FeaturedMovie({film}) {
+export function FeaturedMovie({film}) {
   let genres = [];
   for (const genre of film.genres) {
     genres.push(genre.name)
@@ -17,7 +17,7 @@ function FeaturedMovie({film}) {
         <div className='featured--horizontal'>
             <div className='featured--name'>{film.title}</div>
             <div className='featured--info'>
-                  <div className='featured--ranking'>{film.vote_average}</div>
+                  <div className='featured--ranking'>{film.title}</div>
                   <div className='featured--year'>{film.release_date}</div>
             </div>
             <div className='featured--description'>{film.overview}</div>
@@ -33,5 +33,3 @@ function FeaturedMovie({film}) {
     </section>
   )
 }
-
-export default FeaturedMovie
