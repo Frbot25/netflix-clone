@@ -2,7 +2,7 @@ import React from 'react'
 import './FeaturedMovie.css'
 import { FaPlay } from 'react-icons/fa';
 import { RiInformationLine } from 'react-icons/ri';
-export function FeaturedMovie({film}) {
+export default function FeaturedMovie({film}) {
   let genres = [];
   for (const genre of film.genres) {
     genres.push(genre.name)
