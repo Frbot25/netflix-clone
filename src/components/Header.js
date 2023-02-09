@@ -4,7 +4,7 @@ import { BsBellFill } from 'react-icons/bs';
 import { MdOutlineArrowDropDown } from 'react-icons/md';
 import Profile from '../assets/AAAABZ2iWyDq0fR9TY_uztNZ4TcwWkPPdS2NdTtUt3EHjC_rkiEAexSxSUfbrAYTaiI5pcHVs5QMIAhgo1tVaDJr67VjRcr_ZCw.png';
 import { NavLink } from 'react-router-dom';
-
+import logo from './../assets/flexflix.png'
 const Header = () => {
     const searchInput = document.querySelector('.search--input');
     const handleClic = () => {
@@ -26,7 +26,7 @@ const Header = () => {
         <div className='header'>
         <nav className='navbar'>
             <div className='navbar--container'>
-            <img src="https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg" alt="netflix" style={{width: "100px", height: "auto"}}/>
+            <img src={logo} alt="netflix" style={{width: "100px", height: "auto"}}/>
             <ul>
                 <li><NavLink to='/'>Accueil</NavLink></li>
                 <li><NavLink to='#'>Série</NavLink></li>
