@@ -17,7 +17,7 @@ function FeaturedMovie({film}) {
         <div className='featured--horizontal'>
             <div className='featured--name'>{film.title}</div>
             <div className='featured--info'>
-                  <div className='featured--ranking'>{film.vote_average.toFixed(2)}</div>
+                  <div className='featured--ranking'>{film.vote_average}</div>
                   <div className='featured--year'>{film.release_date}</div>
             </div>
             <div className='featured--description'>{film.overview}</div>
