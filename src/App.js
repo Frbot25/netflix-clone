@@ -4,8 +4,10 @@ import MovieSection from './components/MovieSection';
 import FetchApiMovie from './FetchApiMovie';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Top from './components/top/Top';
 import { FaPlay } from 'react-icons/fa';
 import { RiInformationLine } from 'react-icons/ri';
+import FeaturedMovie from './components/FeaturedMovie';
 function App() {
   let genres = [];
   window.document.addEventListener('scroll',async (event) => {
@@ -50,46 +52,25 @@ function App() {
   }
   return (
     <div className="App">
-      <Header />
-      <main>
-        <>
+    <Header />
+    <main>
+      <>
+    {
+      featureData && <FeaturedMovie film={featureData}/>
+    }
+    </>
+      {/* <Banner film={film}/> */}
+      <Top />
+    <section className='list'>
       {
-        featureData && 
-        <section className='featured' style={{
-          backgroundSize: "cover",
-          backgroundImage: `url(https://image.tmdb.org/t/p/original${featureData.backdrop_path})`,
-          backgroundPosition: 'center'
-        }}>
-          <div className='featured--vertical'>
-            <div className='featured--horizontal'>
-                <div className='featured--name'>{featureData.title}</div>
-                <div className='featured--info'>
-                      <div className='featured--ranking'>{featureData.vote_count}</div>
-                      <div className='featured--year'>{featureData.release_date}</div>
-                </div>
-                <div className='featured--description'>{featureData.overview}</div>
-                <div className='featured--button'>
-                  <a href="/" className='featured--playbutton'><FaPlay /> Lecture</a>
-                  <a href="/" className='featured--mylistbutton'><RiInformationLine /> Plus d'infos</a>
-                  </div>
-                  <div className='featured--genres'>
-                     <strong> Genres : {genres.join(", ")}</strong>
-                  </div>
-            </div>
-          </div>
-        </section>
+        moviesList.map((item, key) => (
+          <MovieSection className="item" key={key} title={item.title} items={item.item}/>
+        ))
       }
-      </>
-      <section className='list'>
-        {
-          moviesList.map((item, key) => (
-            <MovieSection className="item" key={key} title={item.title} items={item.item}/>
-          ))
-        }
-      </section>
-      </main>
-      <Footer />
-    </div>
+    </section>
+    </main>
+
+  </div>
   );
 }
 
