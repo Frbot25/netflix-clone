@@ -1,6 +1,6 @@
 # Netflix-clone
 
-[An external link](https://netflix-clone-fb.netlify.app/)
+[An external link](https://flexflix-clone-fb.netlify.app/)
 ![image info](./Capture1.JPG)
 
 ## Getting Started with Create React App

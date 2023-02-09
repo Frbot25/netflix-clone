@@ -17,8 +17,8 @@ const fetchMovies = async (endpoint) => {
     .catch((error) => console.log(error))
 }
 
-export default {
-    getHomeMovies: async () => {
+
+  const  getHomeMovies = async () => {
         return [
             {
                 slug: "top_rated",
@@ -67,8 +67,8 @@ export default {
             },
             
         ]
-    },
-    getTopMovies: async () => {
+    }
+   const getTopMovies = async () => {
         return [
             {
                 slug: "top_rated",
@@ -76,8 +76,8 @@ export default {
                 item: await fetchMovies(`movie/top_rated?api_key=${API_KEY}`),
             },
         ]
-    },
-    getsearch: async (keyword) => {
+    }
+  const  getsearch = async (keyword) => {
         return [
             {
                 slug: "top_rated",
@@ -85,8 +85,8 @@ export default {
                 item: await fetchMovies(`search/${keyword}?api_key=${API_KEY}`),
             },
         ]
-    },
-    getOneMovie: async (movieId, type) => {
+    }
+   const getOneMovie = async (movieId, type) => {
         let info = [];
         if(movieId) {
             switch (type) {
@@ -103,5 +103,12 @@ export default {
         }
        return info
     }
-};
+    const exp = {
+        getHomeMovies,
+        getTopMovies,
+        getsearch,
+        getOneMovie
+    }
+    export default exp;
+
 
