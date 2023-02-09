@@ -5,8 +5,6 @@ import FetchApiMovie from './FetchApiMovie';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Top from './components/top/Top';
-import { FaPlay } from 'react-icons/fa';
-import { RiInformationLine } from 'react-icons/ri';
 import FeaturedMovie from './components/FeaturedMovie';
 function App() {
   let genres = [];
